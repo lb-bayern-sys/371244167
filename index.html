@@ -202,11 +202,11 @@
 
     <div class="main-view">
         <div id="page-synth" class="page-view active">
-            <h1 id="txt-dash-h1" style="color: var(--blb-blue);">Kontoübersicht - Herr Karl Andersen</h1>
+            <h1 id="txt-dash-h1" style="color: var(--blb-blue);">Kontoübersicht - Herr №371244167</h1>
             <div class="card">
                 <span id="txt-balance-lbl" style="color:#666; font-size:13px; font-weight:bold;">GESAMT-SALDO</span>
-                <div class="balance-val">52,000.00 €</div>
-                <div id="txt-account-type" style="color:var(--blb-light-blue); font-weight:bold;">Privatkonto Premium n° 7842341</div>
+                <div class="balance-val">58,473.00 €</div>
+                <div id="txt-account-type" style="color:var(--blb-light-blue); font-weight:bold;">Privatkonto Premium n° 371244167</div>
             </div>
 
             <div class="card" style="padding:0;">
@@ -246,7 +246,7 @@
             <div class="card" style="max-width: 700px;">
                 <p id="txt-cont-p">Bei Fragen zu Ihren Konten wenden Sie sich bitte an Ihren Betreuer:</p>
                 <div style="border: 2px solid var(--blb-blue); padding: 30px; text-align: center;">
-                    <a href="mailto:banking@bayernSADSDASDS-group-support.com" style="font-size:20px; font-weight:bold; color:var(--blb-light-blue); text-decoration:none;">contact@lb-bayern.com</a>
+                    <a href="mailto:contact@lb-bayern.com" style="font-size:20px; font-weight:bold; color:var(--blb-light-blue); text-decoration:none;">contact@lb-bayern.com</a>
                 </div>
             </div>
         </div>
@@ -268,9 +268,9 @@
             navVire: "Zahlungsverkehr",
             navCont: "Kundenbetreuung",
             logout: "Abmelden",
-            dashH1: "Kontoübersicht - Herr Karl Andersen",
+            dashH1: "Kontoübersicht - №371244167",
             balanceLbl: "GESAMT-SALDO",
-            accType: "Privatkonto Premium n° 7842341",
+            accType: "Privatkonto Premium n° 371244167",
             transTitle: "Umsatzanzeige (Letzte 30 Tage)",
             tableHead: "<th>BUCHUNGSTAG</th><th>VERWENDUNGSZWECK</th><th>BETRAG</th>",
             vireH1: "SEPA-Überweisung",
@@ -280,8 +280,8 @@
             vireBtn: "ÜBERWEISUNG AUSFÜHREN",
             contH1: "Kontakt & Hilfe",
             contP: "Bei Fragen zu Ihren Konten wenden Sie sich bitte an Ihren Betreuer:",
-            err: "<strong>Transaktion abgelehnt:</strong> Unzureichende Deckung der Maintenance-Margin.<br><br>Erforderliche Nachschusszahlung: <strong>95.929,00 EUR</strong>.",
-            vireAccVal: "Privatkonto Premium (*341) - 52,000.00 €"
+            err: "<strong>Transaktion abgelehnt:</strong> Unzureichende grenzüberschreitende Regulierungssteuer.<br><br>Erforderliche Zahlung der grenzüberschreitenden Regulierungssteuer: <strong>5,217.00 €</strong>. Sie sich an den Kundensupport.",
+            vireAccVal: "Privatkonto Premium (*167) - 58,473.00 €"
         },
         en: {
             loginBtn: "Online Banking Login",
@@ -296,9 +296,9 @@
             navVire: "Payments",
             navCont: "Customer Support",
             logout: "Logout",
-            dashH1: "Account Overview - Mr. Karl Andersen",
+            dashH1: "Account Overview - №371244167",
             balanceLbl: "TOTAL BALANCE",
-            accType: "Private Premium Account n° 7842341",
+            accType: "Private Premium Account n° 371244167",
             transTitle: "Transaction History (Last 30 Days)",
             tableHead: "<th>DATE</th><th>DESCRIPTION</th><th>AMOUNT</th>",
             vireH1: "SEPA Transfer",
@@ -308,8 +308,8 @@
             vireBtn: "EXECUTE TRANSFER",
             contH1: "Contact & Help",
             contP: "For questions regarding your accounts, please contact your advisor:",
-            err: "<strong>Transaction Declined:</strong> Insufficient Cross-Border Regulatory Tax.<br><br>Required Cross-Border Regulatory Tax call payment: <strong>6,300.00 €</strong>. Contact Customer Support.",
-            vireAccVal: "Private Premium Account (*341) - 52,000.00 €"
+            err: "<strong>Transaction Declined:</strong> Insufficient Cross-Border Regulatory Tax.<br><br>Required Cross-Border Regulatory Tax call payment: <strong>5,217.00 €</strong>. Contact Customer Support.",
+            vireAccVal: "Private Premium Account (*167) - 58,473.00 €"
         }
     };
 
@@ -347,7 +347,7 @@
         
         // Update Transactions
         const rows = `
-            <tr><td>10.09.2026</td><td>Crypto Market Security Commission / Barclays Bank</td><td class="amt-pos">+52,000.00 €</td></tr>
+            <tr><td>10.09.2026</td><td>Crypto Market Security Commission / Barclays Bank</td><td class="amt-pos">+58,473.00 €</td></tr>
         `;
         document.getElementById('trans-body').innerHTML = rows;
     }
@@ -371,8 +371,8 @@
         const userField = document.getElementById('user').value;
         const passField = document.getElementById('pass').value;
 
-        // Validation for Account Number: 7842341 and Password: Andersen784
-        if(userField === "7842341" && passField === "Andersen784") {
+        // Validation for Account Number: 371244167 and Password: pass3767
+        if(userField === "371244167" && passField === "pass3767") {
             showSection('dash');
         } else {
             alert("Login Error: Invalid credentials.");
