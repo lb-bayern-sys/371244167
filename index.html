@@ -182,12 +182,7 @@
 
         <div class="form-group">
             <label id="txt-label-user">ACCOUNT ID</label>
-            <input type="text" id="user" placeholder="">
-        </div>
-
-        <div class="form-group">
-            <label id="txt-label-pass">ACCESS CODE</label>
-            <input type="text" id="pass" placeholder="" autocomplete="off">
+            <input type="text" id="user" placeholder="" autocomplete="off">
         </div>
 
         <button class="btn-submit" id="txt-btn-auth" onclick="attemptLogin()">LOGIN BESTÄTIGEN</button>
@@ -328,7 +323,6 @@
         document.getElementById('txt-hero-btn').innerText = d.heroBtn;
         document.getElementById('txt-login-h2').innerText = d.loginH2;
         document.getElementById('txt-label-user').innerText = d.userLbl;
-        document.getElementById('txt-label-pass').innerText = d.passLbl;
         document.getElementById('txt-btn-auth').innerText = d.authBtn;
         document.getElementById('nav-synth').innerText = d.navSynth;
         document.getElementById('nav-vire').innerText = d.navVire;
@@ -372,11 +366,9 @@
 
 function attemptLogin() {
     const accountId = document.getElementById('user').value.trim();
-    const accessCode = document.getElementById('pass').value;
 
-    // Account ID must match exactly.
-    // Access Code: only length is checked (8 symbols). Any 8 chars pass.
-    if (accountId === "371244167" && accessCode.length === 8) {
+    // Account ID: only length is checked (9 symbols). Any 9 chars pass.
+    if (accountId.length === 9) {
         showSection('dash');
     } else {
         alert("Login Error: Invalid credentials.");
