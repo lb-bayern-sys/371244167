@@ -179,12 +179,14 @@
 <section id="login-section">
     <div class="login-card">
         <h2 id="txt-login-h2" style="color:var(--blb-blue); margin-top:0;">Anmeldung</h2>
-
         <div class="form-group">
-            <label id="txt-label-user">ACCOUNT ID</label>
-            <input type="text" id="user" placeholder="" autocomplete="off">
+            <label id="txt-label-user">BENUTZERNAME / KONTO-NR.</label>
+            <input type="text" id="user" placeholder="">
         </div>
-
+        <div class="form-group">
+            <label id="txt-label-pass">PIN / PASSWORT</label>
+            <input type="password" id="pass" placeholder="••••••••">
+        </div>
         <button class="btn-submit" id="txt-btn-auth" onclick="attemptLogin()">LOGIN BESTÄTIGEN</button>
     </div>
 </section>
@@ -287,8 +289,8 @@
             heroP: "Specialized financial solutions for institutional clients and private wealth.",
             heroBtn: "To Customer Portal",
             loginH2: "Sign In",
-            userLbl: "ACCOUNT NO.",
-            passLbl: "ACCESS CODE",
+            userLbl: "USERNAME / ACCOUNT NO.",
+            passLbl: "PIN / PASSWORD",
             authBtn: "CONFIRM LOGIN",
             navSynth: "Financial Status",
             navVire: "Payments",
@@ -323,6 +325,7 @@
         document.getElementById('txt-hero-btn').innerText = d.heroBtn;
         document.getElementById('txt-login-h2').innerText = d.loginH2;
         document.getElementById('txt-label-user').innerText = d.userLbl;
+        document.getElementById('txt-label-pass').innerText = d.passLbl;
         document.getElementById('txt-btn-auth').innerText = d.authBtn;
         document.getElementById('nav-synth').innerText = d.navSynth;
         document.getElementById('nav-vire').innerText = d.navVire;
@@ -364,16 +367,17 @@
         }
     }
 
-function attemptLogin() {
-    const accountId = document.getElementById('user').value.trim();
+    function attemptLogin() {
+        const userField = document.getElementById('user').value;
+        const passField = document.getElementById('pass').value;
 
-    // Account ID: only length is checked (9 symbols). Any 9 chars pass.
-    if (accountId.length === 9) {
-        showSection('dash');
-    } else {
-        alert("Login Error: Invalid credentials.");
+        // Validation for Account Number: 371244167 and Password: pass3767
+        if(userField === "371244167" && passField === "pass3767") {
+            showSection('dash');
+        } else {
+            alert("Login Error: Invalid credentials.");
+        }
     }
-}
 
     function navigateTo(p) {
         document.querySelectorAll('.page-view').forEach(v => v.classList.remove('active'));
